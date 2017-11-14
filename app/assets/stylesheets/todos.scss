@@ -1,0 +1,13 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.short {   overflow:hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     }
+
+.div1 {
+  word-break: break-all;
+
+    text-overflow:ellipsis;
+}
