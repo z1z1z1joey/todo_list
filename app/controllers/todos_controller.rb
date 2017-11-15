@@ -30,9 +30,12 @@ class TodosController < ApplicationController
   end
   def destroy
     set_todo
-    @todo.destroy
-
-    redirect_to todos_url
+    if DateTime.current > @todo.date
+      redirect_to todos_url ,:notice => "時間過期，無法刪除！"
+    else
+      @todo.destroy
+      redirect_to todos_url
+    end
   end
   private
   def todo_params
